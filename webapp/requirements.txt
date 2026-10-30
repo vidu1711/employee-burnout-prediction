@@ -1,0 +1,9 @@
+fastapi>=0.110
+uvicorn>=0.27
+anthropic>=0.40
+pydantic>=2
+pandas
+numpy
+scikit-learn
+vaderSentiment
+joblib

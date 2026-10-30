@@ -1,0 +1,97 @@
+{
+  "employee_id": "EMP003",
+  "signals": {
+    "message_tone": {
+      "weekly_scores": [
+        {
+          "tone_risk_score": 73.0,
+          "avg_sentiment": -0.592,
+          "avg_semantic_sim": 0.63,
+          "n_messages": 2,
+          "week": 1
+        },
+        {
+          "tone_risk_score": 61.5,
+          "avg_sentiment": -0.21,
+          "avg_semantic_sim": 0.631,
+          "n_messages": 2,
+          "week": 2
+        },
+        {
+          "tone_risk_score": 61.9,
+          "avg_sentiment": -0.235,
+          "avg_semantic_sim": 0.621,
+          "n_messages": 4,
+          "week": 3
+        },
+        {
+          "tone_risk_score": 67.4,
+          "avg_sentiment": -0.21,
+          "avg_semantic_sim": 0.777,
+          "n_messages": 2,
+          "week": 4
+        },
+        {
+          "tone_risk_score": 59.0,
+          "avg_sentiment": -0.12,
+          "avg_semantic_sim": 0.633,
+          "n_messages": 3,
+          "week": 5
+        },
+        {
+          "tone_risk_score": 70.4,
+          "avg_sentiment": -0.563,
+          "avg_semantic_sim": 0.588,
+          "n_messages": 2,
+          "week": 6
+        }
+      ],
+      "overall_tone_risk": 65.5,
+      "trend": "stable"
+    },
+    "workload": {
+      "workload_risk_score": 55.5,
+      "baseline_meetings_per_week": 35.0,
+      "recent_meetings_per_week": 36.5,
+      "baseline_afterhours_per_week": 3.5,
+      "recent_afterhours_per_week": 5.7,
+      "meeting_increase_pct": 4.3,
+      "afterhours_increase_pct": 60.6,
+      "trend": "escalating"
+    },
+    "pulse_check": {
+      "pulse_risk_score": 67.5,
+      "avg_wellbeing_value": 2.25,
+      "missed_checkins": 2,
+      "missed_rate": 0.33,
+      "confidence": "medium"
+    }
+  },
+  "rule_based_fusion": {
+    "combined_score": 62.1,
+    "risk_level": "High",
+    "signal_scores": {
+      "tone": 65.5,
+      "workload": 55.5,
+      "pulse": 67.5
+    },
+    "effective_weights_used": {
+      "tone": 0.432,
+      "workload": 0.378,
+      "pulse": 0.189
+    },
+    "confidences": {
+      "tone": 1.0,
+      "workload": 1.0,
+      "pulse": 0.7
+    }
+  },
+  "ml_prediction": {
+    "predicted_risk": "high",
+    "class_probabilities": {
+      "high": 0.95,
+      "low": 0.005,
+      "medium": 0.045
+    }
+  }
+}

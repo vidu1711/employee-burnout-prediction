@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "PulseCheck",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "hr", "top": -110, "left": 150, "attrs": { "label": "Heart rate" } },
+    { "type": "wokwi-potentiometer", "id": "gsr", "top": 40, "left": 150, "attrs": { "label": "Skin sensor (GSR)" } },
+    { "type": "wokwi-pushbutton", "id": "finger", "top": 190, "left": 150, "attrs": { "color": "green", "label": "Finger on sensor" } }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "hr:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "hr:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "hr:SIG", "esp:D35", "green", [ "v0" ] ],
+    [ "gsr:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "gsr:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "gsr:SIG", "esp:D34", "green", [ "v0" ] ],
+    [ "finger:1.l", "esp:D4", "green", [ "v0" ] ],
+    [ "finger:2.l", "esp:GND.1", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
